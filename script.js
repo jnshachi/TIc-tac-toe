@@ -4,6 +4,15 @@ let isgameover = false;
 const changeTurn =()=>{
     return turn === "X"?"0":"X"
 }
+const allSquaresFilled = ()=> {
+    let boxtexts = document.getElementsByClassName('boxtext');
+    for (let i = 0; i < boxtexts.length; i++) {
+      if (boxtexts[i].innerText === "") {
+        return false;
+      }
+    }
+    return true;
+}
 
 const checkWin = ()=>{
     let boxtexts = document.getElementsByClassName('boxtext');
@@ -24,7 +33,12 @@ const checkWin = ()=>{
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "206px"
             document.querySelector(".line").style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`
             document.querySelector(".line").style.width = "20vw";
-        }
+        } else if (allSquaresFilled()) {
+            // Add code to handle a draw here
+            document.querySelector('.info').innerText = " Opps! It's a DRAW"
+            isgameover = true;
+          }
+
     })
 }
 
