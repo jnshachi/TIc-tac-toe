@@ -37,6 +37,7 @@ const checkWin = ()=>{
             // Add code to handle a draw here
             document.querySelector('.info').innerText = " Opps! It's a DRAW"
             isgameover = true;
+            document.querySelector('.imgbox').getElementsByTagName('img')[1].style.width = "206px"
           }
 
     })
@@ -68,5 +69,6 @@ reset.addEventListener('click',(e)=>{
     isgameover = false;
     document.getElementsByClassName("info")[0].innerText = "Turn for "+ turn;
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px"
+    document.querySelector('.imgbox').getElementsByTagName('img')[1].style.width = "0px"
     document.querySelector(".line").style.width = "0";
 })
