@@ -11,12 +11,13 @@ nav{
 nav img{
     height: 50px;
     display: flex;
-    padding: 5px;
+    padding: 5px 20px;
     vertical-align: middle;
 
 }
 nav ul{
     list-style-type: none;
+    padding:0ch
 }
 
 .gameContainer{ 
