@@ -33,7 +33,7 @@ const checkWin = ()=>{
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "206px"
             document.querySelector(".line").style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`
             document.querySelector(".line").style.width = "20vw";
-        } else if (allSquaresFilled()) {
+        } else if (allSquaresFilled() && !isgameover) {
             // Add code to handle a draw here
             document.querySelector('.info').innerText = " Opps! It's a DRAW"
             isgameover = true;
